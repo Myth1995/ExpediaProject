@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ABC.com</title>
+
+<script type="text/javascript" src="jsUtil.js"></script>
+<script type="text/javascript" src="populator.js"></script>
+<script type="text/javascript" src="validator.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/myStyles.css" />
+
+<link rel='stylesheet' type='text/css'
+	href='https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css' />
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjWDuGV8gSmeZEpwwKfYJx_Yvzl_PLdwo&callback=initMap">	
+</script>
+
+<script>
+	$(function() {
+		$("#minTripStartDate").datepicker();
+		$("#maxTripStartDate").datepicker();
+		$("#minTripEndDate").datepicker();
+		$("#maxTripEndDate").datepicker();
+	});
+</script>
+</head>
+<body onload="initPage();">
+	<a href="hotels.html"> <img id="logo" src="Logo2.png" alt="ABC.com">
+	</a>
+	<div class="container">
+		<div>
+			<h1>Find Hotels</h1>
+			<p class="text1">
+				<strong>Find the hotel that best suits your preference</strong>
+			</p>
+
+			<form id="findHotelForm" name="findHotelForm" class="findHotelForm">
+				<table>
+					<tr>
+						<td><label class="formLabel">Destination</label></td>
+						 <td><div id="destinationField"></div></td> 
+ 					</tr>
+					<tr>
+						<td colspan="4"><label class="formLabel">Trip Start
+								Date</label></td>
+					</tr>
+					<tr>
+						<td><label>from</label></td>
+						<td><input id="minTripStartDate" placeholder="mm/dd/yyyy"
+							type="text"></td>
+						<td><label>to</label></td>
+						<td><input id="maxTripStartDate" placeholder="mm/dd/yyyy"
+							type="text"></td>
+					</tr>
+					<tr>
+						<td colspan="4"><label class="formLabel">Trip End
+								Date</label></td>
+					</tr>
+					<tr>
+						<td><label>from</label></td>
+						<td><input id="minTripEndDate" placeholder="mm/dd/yyyy"
+							type="text"></td>
+						<td><label>to</label></td>
+						<td><input id="maxTripEndDate" placeholder="mm/dd/yyyy"
+							type="text"></td>
+					</tr>
+					<tr>
+						<td colspan="4"><label class="formLabel">Average
+								Price Rate</label></td>
+					</tr>
+					<tr>
+						<td><label>from</label></td>
+						<td><input name="minPriceRate" type="number"></td>
+						<td><label>to</label></td>
+						<td><input name="maxPriceRate" type="number"></td>
+					</tr>
+					<tr>
+						<td><label class="formLabel">Minimum Guest Rating </label></td>
+						<td><select name="minRating" id="minRating">
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+						</select></td>
+					</tr>
+					<tr><br></tr>
+					<tr>
+						<td><input id="findBtn" class="findButton" value="Find Deals"
+							type="submit"></td>
+						<td><label class="errorMessage" id="errorMessage"></label></td>
+					</tr>
+
+				</table>
+			</form>
+		</div>
+		<br>
+
+		<div id="result"></div>
+<!-- 		<div id="errorMessage" class="errorMessage"></div>
+ -->
+	</div>
+	<div class="footer">
+		<a href="about.html">About us - </a> <a href="contactUs.html">Contact
+			us</a>
+	</div>
+
+</body>
+</html>

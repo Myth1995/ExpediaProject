@@ -1,0 +1,111 @@
+@CHARSET "UTF-8";
+
+body {
+	margin-top: 0;
+	margin-left: 20px;
+	margin-right: 20px;
+	background-image: url("HotelsPhoto.jpg");
+	background-size: cover;
+}
+.container{
+	width:90%;
+	margin-bottom:10%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+h1{
+	color: #095de5;
+}
+.text1 {
+	font-size: 120%;	
+	background-color: #ffb3b3;
+}
+.result {
+	font-size: 20;
+}
+
+.resultTable {
+	border: 1px solid black;
+	width: 100%; 
+	background-color: #c4d5ef;
+	opacity: 0.8;
+	border: none;
+	margin-left: 15;
+	font-size: 120%;
+}
+
+.findHotelForm {
+	background-color: #c4d5ef;
+	/*   margin-right: 35%;*/
+	margin-right: 35%;
+	font-size: 120%;
+}
+.formLabel{
+	font-weight: bold;
+}
+
+.hotelName {
+	font-weight: bold;
+	font-size: 130%;
+	background-color: #ffb3b3;
+	color: black;
+}
+
+.totalPrice {
+	font-weight: bold;
+	font-size: 120%;
+	color: #095de5;
+}
+
+.offerDate {
+	font-weight: bold;
+	font-size: 110%;
+}
+
+.findButton {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 12px;
+	background-color: #00A4DF;
+	height: 30px;
+    width: 100px;
+}
+
+.footer { 
+	left: 0;
+	bottom: 0;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+.header{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	align-items; right;
+	margin-right: 15px;
+}
+.errorMessage {
+	color: red;
+	font-size: 120%;	
+}
+
+.result {
+	background-color: #c4d5ef;
+}
+
+.starImg {
+	height: 20px;
+}
+.mapStyle{
+      height:80px;
+      width: 180px;
+ }
+.infoText{
+	margin-left: 10px; 
+	margin-right: 30%; 
+	margin-top: 40; 
+	background-color: #c4d5ef;
+}
