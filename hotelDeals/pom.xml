@@ -63,9 +63,46 @@
             <version>3.3</version>
             <configuration>
                 <source>1.8</source>
-                <target>1.8</target>
+	<target>1.8</target>
+	<lifecycleMappingMetadata>
+		<pluginExecutions>
+			<!-- copy-dependency plugin -->
+			<pluginExecution>
+				<pluginExecutionFilter>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<versionRange>[1.0.0,)</versionRange>
+					<goals>
+						<goal>copy-dependencies</goal>
+					</goals>
+				</pluginExecutionFilter>
+				<action>
+					<ignore />
+				</action>
+			</pluginExecution>
+		</pluginExecutions>
+	</lifecycleMappingMetadata>
             </configuration>
+             <!-- <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals><goal>copy-dependencies</goal></goals>
+                    </execution>
+            </executions>  -->      
         </plugin>
+        <plugin>
+	    	<groupId>org.apache.tomcat</groupId>
+	    	<artifactId>tomcat</artifactId>
+	    	<version>9.0.0.M1</version>
+	  	 	 <configuration>
+	     	   <url>http://localhost:8080/hotels.html</url>
+	      	  <username>abc</username>
+	      	  <password>123</password>
+	    </configuration>
+	</plugin>
+
+        
     </plugins>
   </build>
   
